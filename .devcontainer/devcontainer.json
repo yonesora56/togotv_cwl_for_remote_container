@@ -20,15 +20,14 @@
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"sbg-rabix.benten-cwl",
-				"ms-vsliveshare.vsliveshare",
-				"GitHub.copilot"
+				"ms-vsliveshare.vsliveshare"
 			]
 		}
 	},
 
 	"remoteUser": "vscode",
 	"features": {
-		"ghcr.io/devcontainers/features/docker-in-docker:2": "latest",
-		"ghcr.io/devcontainers/features/git:1": "os-provided"
+		"ghcr.io/devcontainers/features/docker-in-docker:2": "latest", //書き方を変えています
+		"ghcr.io/devcontainers/features/git:1": "os-provided" //書き方を変えています
 	}
 }
