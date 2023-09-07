@@ -28,6 +28,6 @@
 	"remoteUser": "vscode",
 	"features": {
 		"ghcr.io/devcontainers/features/docker-in-docker:2": "latest",
-		"git": "os-provided"
+		"ghcr.io/devcontainers/features/git:1": "os-provided"
 	}
 }
