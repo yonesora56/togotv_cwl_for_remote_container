@@ -2,9 +2,9 @@ cwlVersion: v1.0
 class: Workflow
 inputs:
   grep_pattern:
-    type: string
+    type: string #文字列
   target_file:
-    type: File
+    type: File #ファイル
 outputs:
   counts:
     type: File
