@@ -8,6 +8,7 @@ inputs:
       position: 1
   wc_file_name: # 参考：https://github.com/ncbi/pgap/blob/master/progs/cat.cwl
     type: string
+    default: wc_out.txt
 outputs:
   word_counts: 
     type: File

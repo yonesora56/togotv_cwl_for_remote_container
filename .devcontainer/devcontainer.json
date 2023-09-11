@@ -20,7 +20,8 @@
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"sbg-rabix.benten-cwl",
-				"ms-vsliveshare.vsliveshare"
+				"ms-vsliveshare.vsliveshare",
+				"GitHub.vscode-github-actions"
 			]
 		}
 	},
