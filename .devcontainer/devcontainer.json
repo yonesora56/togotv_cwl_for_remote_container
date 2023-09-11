@@ -21,7 +21,9 @@
 			"extensions": [
 				"sbg-rabix.benten-cwl",
 				"ms-vsliveshare.vsliveshare",
-				"GitHub.vscode-github-actions"
+				"GitHub.vscode-github-actions",
+				"ms-toolsai.jupyter",
+				"ms-python.vscode-pylance"
 			]
 		}
 	},

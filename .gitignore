@@ -1,1 +1,5 @@
-data/uniprot_sprot.fasta
+/data/uniprot_sprot.fasta
+/data/uniprot_sprot.fasta.*
+/data/myostatin.fasta
+.env
+CWL_description_correction.ipynb

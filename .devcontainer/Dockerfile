@@ -13,6 +13,7 @@ RUN if [ "${NODE_VERSION}" != "none" ]; then su vscode -c "umask 0002 && . /usr/
 RUN pip install cwltool cwltest cwl-runner pipx 
 RUN pip install open-interpreter 
 RUN pipx install benten
+RUN pip install ipykernel
 
 # install zatsu-cwl-generator
 ARG zatsu_ver=v1.1.1
