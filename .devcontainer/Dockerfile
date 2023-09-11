@@ -10,7 +10,8 @@ RUN if [ "${NODE_VERSION}" != "none" ]; then su vscode -c "umask 0002 && . /usr/
 
 # [Optional] If your pip requirements rarely change, uncomment this section to add them to the image.
 # 新しくOpen-interpreterも追加しました
-RUN pip install cwltool cwltest cwl-runner pipx open-interpreter 
+RUN pip install cwltool cwltest cwl-runner pipx 
+RUN pip install open-interpreter 
 RUN pipx install benten
 
 # install zatsu-cwl-generator
