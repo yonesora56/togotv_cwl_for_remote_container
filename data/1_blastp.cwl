@@ -10,51 +10,65 @@ doc: BLASTP.cwlを書いてみた
 requirements:
   DockerRequirement:
     dockerPull: "biocontainers/blast:v2.2.31_cv2"
+  InlineJavascriptRequirement: {} # Javascriptの式を使わせるためにここの部分が必要らしい
 
+# input
 inputs:
-  - id: protein_query
+  protein_query:
     type: File
     inputBinding:
       prefix: "-query"
       position: 1
-  - id: protein_database_directory
+  protein_database_directory: #ここが難しい? けど例はたくさんあるので参考にする
     type: Directory?
-  - id: protein_database_name
+    default:
+      class: Directory
+      path: "./"
+  protein_database_name:
     type: string?
+    default: "uniprot_sprot.fasta"
     inputBinding:
-      prefix: "-db"
+      prefix: "-database"
       position: 2
-      valueFrom: ${ return inputs.protein_database_directory.path + "/" + inputs.protein_database_name; }
-  - id: e-value
+      # もし入力されていなかったらカレントディレクトリのデータベースを使用するという構文
+      # YAMLのparser? が混乱してしまうということで､""でくくった
+      valueFrom: "${ return inputs.protein_database_directory ? inputs.protein_database_directory.path + '/' + inputs.protein_database_name : './' + inputs.protein_database_name; }"
+  e-value:
     type: float?
     default: 1e-5
     inputBinding:
       prefix: "-evalue"
       position: 3
-  - id: number_of_threads
+  number_of_threads:
     type: int
     default: 4
     inputBinding:
       prefix: "-num_threads"
       position: 4
-  - id: outformat_type
+  outformat_type:
     type: int
     default: 6
     inputBinding:
       prefix: "-outfmt"
       position: 5
-  - id: output_file_name
+  output_file_name:
     type: string
     inputBinding:
       prefix: "-out"
       position: 6
-  - id: max_target_sequence
+  max_target_sequence:
     type: int
     default: 20
     inputBinding:
       prefix: "-max_target_seqs"
       position: 7
 
+#outputs
 outputs:
   output_file:
-    type: stdout
+    type: File
+    outputBinding:
+      glob: "$(inputs.output_file_name)"
+
+# stdout
+stdout: $(inputs.output_file_name)
