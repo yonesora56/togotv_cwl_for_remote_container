@@ -57,3 +57,9 @@ biocontainers/blast      v2.2.31_cv2         5b25e08b9871   4 years ago   2.03GB
 
 - `docker run --rm -it -v `pwd`:`pwd` -w `pwd` biocontainers/fasttree:v2.1.10-2-deb_cv1 FastTree -out MSTN_tree.newick `pwd`/MSTN_aligned_sequence.fasta`
 - うまくいったっぽい
+
+&nbsp;
+
+### 6. phylogenetic_workflow.cwl
+
+- わかりやすいように全てのパラメータを明示する方針

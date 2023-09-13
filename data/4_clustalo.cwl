@@ -13,18 +13,18 @@ inputs:
   clustalo_inputs:
     type: File
     inputBinding:
-      prefix: "-file"
+      prefix: "-i"
       position: 1
   clustalo_format:
     type: string
     default: "fasta"
     inputBinding:
-      prefix: "-outfmt"
+      prefix: "--outfmt"
       position: 2
   clustalo_output_name:
     type: string
     inputBinding:
-      prefix: "-out"
+      prefix: "-o"
       position: 3
 
 outputs:

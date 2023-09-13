@@ -9,19 +9,20 @@ requirements:
   DockerRequirement:
     dockerPull: "biocontainers/blast:v2.2.31_cv2"
   InlineJavascriptRequirement: {} # Javascriptの式を使わせるためにここの部分が必要らしい
+  InitialWorkDirRequirement:
+    listing:
+      - entry: $(inputs.blastdbcmd_protein_database_directory)
+        writable: False
 
 # Inputs
 inputs:
   blastdbcmd_protein_database_directory: #ここが難しい? けど例はたくさんあるので参考にする
     type: Directory?
-    default:
-      class: Directory
-      path: "./"
   blastdbcmd_protein_database_name:
     type: string?
     default: "uniprot_sprot.fasta"
     inputBinding:
-      prefix: "-database"
+      prefix: "-db"
       position: 1
       # もし入力されていなかったらカレントディレクトリのデータベースを使用するという構文
       # YAMLのparser? が混乱してしまうということで､""でくくった
@@ -29,7 +30,7 @@ inputs:
   id_query:
     type: File
     inputBinding:
-      prefix: "-query"
+      prefix: "-entry_batch"
       position: 2
   blastdbcmd_output_name:
     type: string

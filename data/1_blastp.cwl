@@ -10,7 +10,7 @@ doc: BLASTP.cwlを書いてみた
 requirements:
   DockerRequirement:
     dockerPull: "biocontainers/blast:v2.2.31_cv2"
-  InlineJavascriptRequirement: {} # Javascriptの式を使わせるためにここの部分が必要らしい
+  InlineJavascriptRequirement: {} # Javascriptの式を使わせるためにここの部分が必要
 
 # input
 inputs:
@@ -28,7 +28,7 @@ inputs:
     type: string?
     default: "uniprot_sprot.fasta"
     inputBinding:
-      prefix: "-database"
+      prefix: "-db"
       position: 2
       # もし入力されていなかったらカレントディレクトリのデータベースを使用するという構文
       # YAMLのparser? が混乱してしまうということで､""でくくった
@@ -65,7 +65,7 @@ inputs:
 
 #outputs
 outputs:
-  output_file:
+  blastp_output_file:
     type: File
     outputBinding:
       glob: "$(inputs.output_file_name)"

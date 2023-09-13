@@ -1,0 +1,30 @@
+# 1_blastp.cwl のパラメータ
+1_protein_query:
+  class: File
+  path: "MSTN.fasta"
+2_protein_database_directory:
+  class: Directory
+  path: "./"
+3_protein_database_name: "uniprot_sprot.fasta"
+4_e-value: 1e-5
+5_number_of_threads: 4
+6_outformat_type: 6
+7_output_file_name: "blastp_result.txt"
+8_max_target_sequence: 20
+
+# 2_awk.cwl のパラメータ
+9_output_id_file_name: "awk_output_id.txt"
+
+# 3_blastdbcmd.cwl のパラメータ
+10_blastdbcmd_protein_database_directory:
+  class: Directory
+  path: "./"
+11_blastdbcmd_protein_database_name: "uniprot_sprot.fasta"
+12_blastdbcmd_output_name: "blastdbcmd_output.fasta"
+
+# 4_clustalo.cwl のパラメータ
+13_clustalo_format: "fasta"
+14_clustalo_output_name: "clustalo_output.fasta"
+
+# 5_fasttree.cwl のパラメータ
+15_fasttree_output_file_name: "fasttree_output.newick"

@@ -4,6 +4,10 @@ class: CommandLineTool
 cwlVersion: v1.0
 baseCommand: [fasttree]
 
+requirements:
+  DockerRequirement:
+    dockerPull: "biocontainers/fasttree:v2.1.10-2-deb_cv1"
+
 #Inputs
 inputs:
   fasttree_output_file_name:
@@ -14,7 +18,6 @@ inputs:
   fasttree_input_file:
     type: File
     inputBinding:
-      prefix: "-query"
       position: 2
 # Outputs
 outputs:

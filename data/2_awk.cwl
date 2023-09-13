@@ -10,17 +10,16 @@ arguments:
     position: 1 # 同じオブジェクト内に配置しなきゃ駄目!! - position とか並列して書いちゃうと駄目
 
 inputs:
-  blastP_result:
+  blastp_result:
     type: File
     inputBinding:
       position: 2
-      prefix: "-query"
   output_id_file_name:
     type: string
     inputBinding:
       position: 3
 outputs:
-  awk_results:
+  awk_output:
     type: File
     outputBinding:
       glob: "$(inputs.output_id_file_name)"
