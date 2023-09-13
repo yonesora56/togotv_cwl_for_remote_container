@@ -9,10 +9,7 @@ requirements:
   DockerRequirement:
     dockerPull: "biocontainers/blast:v2.2.31_cv2"
   InlineJavascriptRequirement: {} # Javascriptの式を使わせるためにここの部分が必要らしい
-  InitialWorkDirRequirement:
-    listing:
-      - entry: $(inputs.blastdbcmd_protein_database_directory)
-        writable: False
+  InitialWorkDirRequirement
 
 # Inputs
 inputs:
