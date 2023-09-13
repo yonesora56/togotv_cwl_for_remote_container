@@ -1,4 +1,17 @@
-# What is this?
+# これは何?
+
+__統合TV撮影用のリポジトリです｡__
+
+## CWL fileのありか
+
+1. [cwl directory](./cwl/)
+2. [cwl_v1.2](./cwl_v1.2/)
+3. [data](./data/)
+
+- わかりづらくてすみません...
+
+
+## What is this?
 This is a template to write CWL documents with VSCode with remote container extension.
 
 [![Actions Status](https://github.com/tom-tan/cwl-for-remote-container-template/workflows/CI/badge.svg)](https://github.com/tom-tan/cwl-for-remote-container-template/actions) [![CircleCI](https://circleci.com/gh/tom-tan/cwl-for-remote-container-template/tree/master.svg?style=shield)](https://circleci.com/gh/tom-tan/cwl-for-remote-container-template/tree/master) [![pipeline status](https://gitlab.com/tom-tan/cwl-for-remote-container-template/badges/master/pipeline.svg)](https://gitlab.com/tom-tan/cwl-for-remote-container-template/commits/master)
