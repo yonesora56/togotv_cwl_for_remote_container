@@ -9,7 +9,6 @@ requirements:
   DockerRequirement:
     dockerPull: "biocontainers/blast:v2.2.31_cv2"
   InlineJavascriptRequirement: {} # Javascriptの式を使わせるためにここの部分が必要らしい
-  InitialWorkDirRequirement
 
 # Inputs
 inputs:
