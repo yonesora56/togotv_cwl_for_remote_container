@@ -12,17 +12,21 @@ requirements:
 
 # Inputs
 inputs:
-  blastdbcmd_protein_database_directory: #ここが難しい? けど例はたくさんあるので参考にする
-    type: Directory?
-  blastdbcmd_protein_database_name:
-    type: string?
+  blastdbcmd_protein_database:
+    type: File
     default: "uniprot_sprot.fasta"
     inputBinding:
       prefix: "-db"
       position: 1
-      # もし入力されていなかったらカレントディレクトリのデータベースを使用するという構文
-      # YAMLのparser? が混乱してしまうということで､""でくくった
-      valueFrom: "${ return inputs.blastdbcmd_protein_database_directory ? inputs.blastdbcmd_protein_database_directory.path + '/' + inputs.blastdbcmd_protein_database_name : './' + inputs.blastdbcmd_protein_database_name; }"
+    secondaryFiles:
+      - ^.phd
+      - ^.phi
+      - ^.phr
+      - ^.pin
+      - ^.pog
+      - ^.psd
+      - ^.psi
+      - ^.psq
   id_query:
     type: File
     inputBinding:
@@ -33,7 +37,6 @@ inputs:
     inputBinding:
       prefix: "-out"
       position: 3
-
 #Outputs
 outputs:
   blastdbcmd_output:
