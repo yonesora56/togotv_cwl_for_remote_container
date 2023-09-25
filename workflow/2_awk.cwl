@@ -1,13 +1,18 @@
 #!/usr/bin/env cwl-runner
-# Generated from: awk '{ print $2 }' blastp_result_MSTN.txt > blastp_result_id.txt
+# Generated from: docker run --rm -it -v `pwd`:`pwd` -w `pwd` ubuntu:23.10 awk '{ print $2 }' blastp_result_MSTN.txt > blastp_result_id.txt
 class: CommandLineTool
 cwlVersion: v1.0
 baseCommand: [awk]
+doc: Extract hit IDs from BLASTp results
+
+requirements:
+  DockerRequirement:
+    dockerPull: "ubuntu:23.10"
 
 # 固定の引数
 arguments:
   - valueFrom: '{ print $2 }' # "" で囲むとエラーになる shellQuate: false でも駄目だった
-    position: 1 # 同じオブジェクト内に配置しなきゃ駄目!! - position とか並列して書いちゃうと駄目
+    position: 1 #同じオブジェクト内に配置しなきゃ駄目!! - position とか並列して書いちゃうと駄目
 
 inputs:
   blastp_result:
