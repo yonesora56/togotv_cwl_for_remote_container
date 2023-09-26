@@ -2,4 +2,3 @@
 /data/uniprot_sprot.fasta.*
 /data/MSTN.fasta
 .env
-CWL_description_correction.ipynb
