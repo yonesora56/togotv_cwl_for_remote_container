@@ -17,7 +17,7 @@ inputs:
       prefix: "-query"
       position: 1
   protein_database:
-    type: string
+    type: File
     default: "uniprot_sprot.fasta"
     inputBinding:
       prefix: "-db"
