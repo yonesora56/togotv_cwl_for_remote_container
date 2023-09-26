@@ -1,9 +1,9 @@
 protein_query: 
   class: File
-  path: MSTN.fasta
+  path: ../data/MSTN.fasta
 protein_database: 
   class: File
-  path: uniprot_sprot.fasta
+  path: ../data/uniprot_sprot.fasta
 e-value: 1e-5
 number_of_threads: 4
 outformat_type: 6

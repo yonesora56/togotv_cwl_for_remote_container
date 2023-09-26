@@ -1,5 +1,5 @@
-/workflow/uniprot_sprot.fasta
-/workflow/uniprot_sprot.fasta.*
-/workflow/MSTN.fasta
+/data/uniprot_sprot.fasta
+/data/uniprot_sprot.fasta.*
+/data/MSTN.fasta
 .env
 CWL_description_correction.ipynb

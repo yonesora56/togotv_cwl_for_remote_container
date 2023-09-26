@@ -18,19 +18,21 @@ inputs:
       position: 1
   protein_database:
     type: File
-    default: "uniprot_sprot.fasta"
+    default: 
+      class: File
+      path: ../data/uniprot_sprot.fasta
     inputBinding:
       prefix: "-db"
       position: 2
     secondaryFiles:
-      - ^.phd
-      - ^.phi
-      - ^.phr
-      - ^.pin
-      - ^.pog
-      - ^.psd
-      - ^.psi
-      - ^.psq
+      - ^.fasta.phd
+      - ^.fasta.phi
+      - ^.fasta.phr
+      - ^.fasta.pin
+      - ^.fasta.pog
+      - ^.fasta.psd
+      - ^.fasta.psi
+      - ^.fasta.psq
 
   e-value:
     type: float?
