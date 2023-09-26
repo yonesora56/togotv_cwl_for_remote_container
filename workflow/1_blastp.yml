@@ -1,0 +1,11 @@
+protein_query: 
+class: File
+default: MSTN.fasta
+protein_database: 
+class: File
+default: uniprot_sprot.fasta
+e-value: 1e-5
+number_of_threads: 4
+outformat_type: 6
+output_file_name: "blastp_result.txt"
+max_target_sequence: 20
