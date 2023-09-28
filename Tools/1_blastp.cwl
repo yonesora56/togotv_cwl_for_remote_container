@@ -5,7 +5,8 @@ cwlVersion: v1.0
 baseCommand: [blastp]
 doc: BLASTP step 
 
-requirements:
+# requirements だと絶対ないと失敗する
+hints: #hintsフィールドだと､なくてもいいよということになる
   DockerRequirement:
     dockerPull: "biocontainers/blast:v2.2.31_cv2"
 

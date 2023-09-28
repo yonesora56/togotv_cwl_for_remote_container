@@ -2,16 +2,15 @@
 cwlVersion: v1.0
 class: CommandLineTool
 baseCommand: grep
+arguments: [ $(inputs.pattern), $(inputs.file_to_search)]
 inputs:
   pattern: 
-    type: string 
-    inputBinding:
-      position: 1 
-  file_to_search: 
+    type: string
+    doc: 文字列を入力してください (例：one)
+  file_to_search: #パラメータ2を追加
     type: File
-    inputBinding:
-      position: 2 
-outputs: 
+    doc: ファイルをインプットしてください
+outputs:  
   results:
     type: stdout
 stdout: grep_out.txt 
