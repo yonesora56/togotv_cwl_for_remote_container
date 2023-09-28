@@ -11,8 +11,8 @@ requirements:
 
 # 固定の引数
 arguments:
-  - valueFrom: '{ print $2 }' # "" で囲むとエラーになる shellQuate: false でも駄目だった
-    position: 1 #同じオブジェクト内に配置しなきゃ駄目!! - position とか並列して書いちゃうと駄目
+  - valueFrom: '{ print $2 }' 
+    position: 1
 
 inputs:
   blastp_result:

@@ -1,0 +1,5 @@
+clustalo_inputs:
+  class: File
+  path: ../data/blastdbcmd_result.fasta
+clustal_format: "fasta"
+clustalo_output_name: "clustalo_result.fasta"

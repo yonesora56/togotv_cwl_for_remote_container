@@ -1,0 +1,7 @@
+blastdbcmd_protein_database:
+  class: File
+  path: ../data/uniprot_sprot.fasta
+id_query: 
+  class: File
+  path: ../data/blastp_result_id.txt
+blastdbcmd_output_name: "blastdbcmd_result.fasta"

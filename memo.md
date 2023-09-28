@@ -1,5 +1,18 @@
 # This is the yonezawa memo
 
+- なんでCWLを題材にするのか??
+- shebangを書く? 書かない?
+- どのツールで実行する?(cwltool? runner? toil?)
+- ほしいファイルをキャッチするために
+- ディレクトリの構造?
+
+## 丹生さんに聞くこと
+- bentenが表示されない?
+- devcontainerの書き換え
+- cwlversion v1.0
+- bentenが表示されない?
+
+
 
 ## docker image list(docker image ls)
 

@@ -14,19 +14,21 @@ requirements:
 inputs:
   blastdbcmd_protein_database:
     type: File
-    default: "uniprot_sprot.fasta"
+    default: 
+      class: File
+      path: ../data/uniprot_sprot.fasta
     inputBinding:
       prefix: "-db"
       position: 1
     secondaryFiles:
-      - ^.phd
-      - ^.phi
-      - ^.phr
-      - ^.pin
-      - ^.pog
-      - ^.psd
-      - ^.psi
-      - ^.psq
+      - ^.fasta.phd
+      - ^.fasta.phi
+      - ^.fasta.phr
+      - ^.fasta.pin
+      - ^.fasta.pog
+      - ^.fasta.psd
+      - ^.fasta.psi
+      - ^.fasta.psq
   id_query:
     type: File
     inputBinding:

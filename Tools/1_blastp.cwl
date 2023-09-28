@@ -70,6 +70,3 @@ outputs:
     type: File
     outputBinding:
       glob: "$(inputs.output_file_name)"
-
-# stdout
-stdout: $(inputs.output_file_name)
