@@ -4,12 +4,12 @@ class: CommandLineTool
 baseCommand: grep
 arguments: [ $(inputs.pattern), $(inputs.file_to_search)]
 inputs:
-  pattern: 
+  pattern:
     type: string
-    doc: 文字列を入力してください (例：one)
-  file_to_search: #パラメータ2を追加
+    doc: "please enter a string (example: one)"
+  file_to_search: 
     type: File
-    doc: ファイルをインプットしてください
+    doc: please input file
 outputs:  
   results:
     type: stdout

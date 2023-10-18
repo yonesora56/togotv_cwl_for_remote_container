@@ -5,7 +5,7 @@ cwlVersion: v1.0
 baseCommand: [awk]
 doc: Extract hit IDs from BLASTp results
 
-requirements:
+hints:
   DockerRequirement:
     dockerPull: "ubuntu:23.10"
 
