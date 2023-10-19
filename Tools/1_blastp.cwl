@@ -5,10 +5,19 @@ cwlVersion: v1.0
 baseCommand: [blastp]
 doc: BLASTP step 
 
-# requirements だと絶対ないと失敗する
-hints: #hintsフィールドだと､なくてもいいよということになる
+
+hints: #requirementsではなく､hintsフィールドだと､'記述があった場合に使用する'という方法になるので柔軟になる
   DockerRequirement:
     dockerPull: "biocontainers/blast:v2.2.31_cv2"
+
+arguments:
+  - $(inputs.protein_query)
+  - $(inputs.protein_database)
+  - $(inputs.evalue)
+  - $(inputs.number_of_threads)
+  - $(inputs.outformat_type)
+  - $(inputs.output_file_name)
+  - $(inputs.max_target_sequence) 
 
 # input
 inputs:
@@ -17,6 +26,9 @@ inputs:
     inputBinding:
       prefix: "-query"
       position: 1
+    default:
+      class: File
+      path: ../data/MSTN.fasta
   protein_database:
     type: File
     default: 
@@ -35,7 +47,7 @@ inputs:
       - ^.fasta.psi
       - ^.fasta.psq
 
-  e-value:
+  evalue:
     type: float?
     default: 1e-5
     inputBinding:
@@ -58,6 +70,7 @@ inputs:
     inputBinding:
       prefix: "-out"
       position: 6
+    default: blastp_result.txt
   max_target_sequence:
     type: int
     default: 20
@@ -65,7 +78,6 @@ inputs:
       prefix: "-max_target_seqs"
       position: 7
 
-#outputs
 outputs:
   blastp_output_file:
     type: File
