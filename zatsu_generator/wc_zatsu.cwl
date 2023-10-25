@@ -1,18 +1,17 @@
 #!/usr/bin/env cwl-runner
-# Generated from: wc -l grep_out.txt > wc_out.txt
+# Generated from: wc -l grep_out.txt > wcout.txt
 class: CommandLineTool
 cwlVersion: v1.0
-baseCommand: [wc, -l] #baseCommandに -lオプションを記載
+baseCommand: wc
 arguments:
-  - $(inputs.grep_file)
+  - -l
+  - $(inputs.l)
 inputs:
-  - id: grep_file
+  - id: l
     type: File
     default:
       class: File
-      basename: "grepout.txt"
-      contents: "This is a text file."
-      path: ./grepout.txt # pathフィールドを追加
+      location: file:///workspaces/togotv_shooting/zatsu_generator/grepout.txt
 outputs:
   - id: all-for-debugging
     type:
@@ -22,4 +21,4 @@ outputs:
       glob: "*"
   - id: out
     type: stdout
-stdout: wc_out.txt
+stdout: wcout.txt
