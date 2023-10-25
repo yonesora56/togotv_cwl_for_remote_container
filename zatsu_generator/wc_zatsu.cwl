@@ -5,9 +5,9 @@ cwlVersion: v1.0
 baseCommand: wc
 arguments:
   - -l
-  - $(inputs.l)
+  - $(inputs.grep_out)
 inputs:
-  - id: l
+  - id: grep_out
     type: File
     default:
       class: File

@@ -1,14 +1,12 @@
-# これは何?
+# リポジトリ説明
 
-__統合TV撮影用のリポジトリです｡__
+__統合TVの撮影､および記事の執筆に使用したリポジトリです__
 
-## CWL fileのありか
 
-1. [cwl directory](./cwl/)
-2. [cwl_v1.2](./cwl_v1.2/)
-3. [data](./data/)
 
-- わかりづらくてすみません...
+---
+以下は[cwl-for-remote-container-template](https://github.com/tom-tan/cwl-for-remote-container-template)の説明になっています｡
+
 
 
 ## What is this?

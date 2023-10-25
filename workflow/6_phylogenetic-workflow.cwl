@@ -66,7 +66,7 @@ steps:
     in: 
       protein_query: 1_protein_query
       protein_database: 2_protein_database
-      e-value: 3_e-value
+      evalue: 3_e-value
       number_of_threads: 4_number_of_threads
       outformat_type: 5_outformat_type
       output_file_name: 6_output_file_name
