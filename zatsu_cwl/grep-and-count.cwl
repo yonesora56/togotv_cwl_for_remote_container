@@ -1,7 +1,7 @@
 #!/usr/bin/env cwl-runner
-cwlVersion: v1.0 #shebang
-class: Workflow #Workflowと記述
-inputs: #inputsフィールドを記述
+cwlVersion: v1.0
+class: Workflow
+inputs:
   grep_pattern: #このワークフロー全体のインプット(1)
     type: string
   target_file: #このワークフロー全体のインプット(2)
