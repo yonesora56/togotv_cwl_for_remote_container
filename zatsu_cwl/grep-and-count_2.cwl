@@ -21,9 +21,9 @@ steps:
       mock_txt: target_file
     out: [out]
   2_wc:
-    run: wc_zatsu.cwl
+    run: wc_zatsu_2.cwl
     in:
-      l: 1_grep/out
+      grep_out: 1_grep/out
     out: [out] 
 
 
