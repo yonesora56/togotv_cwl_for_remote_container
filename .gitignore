@@ -2,3 +2,7 @@
 /data/uniprot_sprot.fasta.*
 /data/MSTN.fasta
 .env
+zatsu_cwl_bioinformatics/uniprot_sprot.fasta
+zatsu_cwl_bioinformatics/uniprot_sprot.fasta.*
+zatsu_cwl_bioinformatics/MSTN.fasta
+
