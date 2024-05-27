@@ -1,8 +1,3 @@
-# BLASTP 2.2.31+
-# Query: sp|O18836|GDF8_BOVIN Growth/differentiation factor 8 OS=Bos taurus OX=9913 GN=MSTN PE=1 SV=2
-# Database: /var/lib/cwl/stg90d0f4dc-8137-4082-8c5d-4eaf670f8786/uniprot_sprot.fasta
-# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
-# 20 hits found
 sp|O18836|GDF8_BOVIN	sp|O18836|GDF8_BOVIN	100.00	375	0	0	1	375	1	375	0.0	783
 sp|O18836|GDF8_BOVIN	sp|Q5RZV4|GDF8_BOSIN	100.00	375	0	0	1	375	1	375	0.0	783
 sp|O18836|GDF8_BOVIN	sp|Q5USW1|GDF8_BOSGA	100.00	375	0	0	1	375	1	375	0.0	783
@@ -23,4 +18,3 @@ sp|O18836|GDF8_BOVIN	sp|O18828|GDF8_PAPHA	94.13	375	22	0	1	375	1	375	0.0	743
 sp|O18836|GDF8_BOVIN	sp|Q6UKZ8|GDF8_CANLF	93.33	375	25	0	1	375	1	375	0.0	741
 sp|O18836|GDF8_BOVIN	sp|Q5USV7|GDF8_AEPME	94.40	375	21	0	1	375	1	375	0.0	741
 sp|O18836|GDF8_BOVIN	sp|O18830|GDF8_SHEEP	93.33	375	25	0	1	375	1	375	0.0	738
-# BLAST processed 1 queries
