@@ -39,7 +39,7 @@ inputs:
       - ^.fasta.psi
       - ^.fasta.psq
   - id: evalue
-    type: float?
+    type: float
     default: 1e-5
   - id: num_threads
     type: int
