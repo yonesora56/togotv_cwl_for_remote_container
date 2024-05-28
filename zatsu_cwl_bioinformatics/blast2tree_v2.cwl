@@ -85,23 +85,23 @@ steps:
     out: [out]
   
   step3_blastdbcmd:
-    run: 3_blastdbcmd_docker_v2.cwl
+    run: 3_blastdbcmd_docker_v3.cwl
     in:
       db: 8_blastdbcmd_protein_database
       entry_batch: step2_awk/out
-    out: [all-for-debugging]
+    out: [blastdbcmd_result]
 
   step4_clustalo:
-    run: 4_clustalo_docker.cwl
+    run: 4_clustalo_docker_v2.cwl
     in: 
-      i: step3_blastdbcmd/all-for-debugging
+      i: step3_blastdbcmd/blastdbcmd_result
       o_name: 10_clustalo_output_name
-    out: [all-for-debugging]
+    out: [clustalo_result]
 
   step5_fasttree:
     run: 5_fasttree_docker.cwl
     in:
-      nt: step4_clustalo/all-for-debugging
+      nt: step4_clustalo/clustalo_result
     out: [out]
 
 outputs:
