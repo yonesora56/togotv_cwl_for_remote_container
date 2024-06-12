@@ -60,7 +60,7 @@ inputs:
       - ^.fasta.psd
       - ^.fasta.psi
       - ^.fasta.psq
-  - id: 10_clustalo_output_name
+  - id: 9_clustalo_output_name
     type: string
     doc: "clustalo process output name"
     default: clustalo_output.fasta
@@ -95,7 +95,7 @@ steps:
     run: 4_clustalo_docker.cwl
     in: 
       i: step3_blastdbcmd/all-for-debugging
-      o_name: 10_clustalo_output_name
+      o_name: 9_clustalo_output_name
     out: [all-for-debugging]
 
   step5_fasttree:
