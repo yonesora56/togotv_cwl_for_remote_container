@@ -105,7 +105,23 @@ steps:
     out: [out]
 
 outputs:
-  final_output_bootstrap:
+  blastp_output:
+    type: File
+    doc: "blastp output"
+    outputSource: step1_blastp/blastp_result
+  awk_output:
+    type: File
+    doc: "awk output"
+    outputSource: step2_awk/out
+  blastdbcmd_output:
+    type: File
+    doc: "blastdbcmd output"
+    outputSource: step3_blastdbcmd/blastdbcmd_result
+  clustalo_output:
+    type: File
+    doc: "clustalo output"
+    outputSource: step4_clustalo/clustalo_result
+  fasttree_output:
     type: File
     doc: "final output file"
     outputSource: step5_fasttree/out
