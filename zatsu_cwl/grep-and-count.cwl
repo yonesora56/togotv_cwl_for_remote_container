@@ -1,6 +1,6 @@
 #!/usr/bin/env cwl-runner
 cwlVersion: v1.0
-class: Workflow
+class: Workflow #このワークフロー全体のクラスはWorkflowであることを示す
 inputs:
   grep_pattern: #このワークフロー全体のインプット(1)
     type: string
@@ -21,9 +21,9 @@ steps:
       mock_txt: target_file
     out: [out]
   2_wc:
-    run: wc_zatsu.cwl
+    run: wc_zatsu_v2.cwl
     in:
-      l: 1_grep/out
+      grep_out: 1_grep/out
     out: [out] 
 
 
