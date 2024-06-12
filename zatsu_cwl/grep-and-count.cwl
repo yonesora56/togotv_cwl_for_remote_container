@@ -1,6 +1,6 @@
 #!/usr/bin/env cwl-runner
 cwlVersion: v1.0
-class: Workflow #このワークフロー全体のクラスはWorkflowであることを示す
+class: Workflow
 inputs:
   grep_pattern: #このワークフロー全体のインプット(1)
     type: string
