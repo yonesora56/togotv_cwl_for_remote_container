@@ -8,7 +8,7 @@ arguments:
   - $(inputs.mock_txt)
 inputs:
   - id: one
-    type: Any
+    type: any
     default: one
   - id: mock_txt
     type: File

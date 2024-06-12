@@ -15,13 +15,13 @@ outputs: # このワークフロー全体の出力としてgrepの結果も得�
     outputSource: 2_wc/out
 steps:
   1_grep:
-    run: grep_zatsu.cwl
+    run: grep_zatsu_v3.cwl
     in:
-      one: grep_pattern #(左)grep_zatsu.cwlのinput: (右)このワークフローのinput
+      one: grep_pattern #(左)grep_zatsu_v2.cwlのinput: (右)このワークフローのinput
       mock_txt: target_file
     out: [out]
   2_wc:
-    run: wc_zatsu_2.cwl
+    run: wc_zatsu_v2.cwl
     in:
       grep_out: 1_grep/out
     out: [out] 
