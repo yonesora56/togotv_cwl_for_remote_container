@@ -8,11 +8,10 @@ arguments:
   - $(inputs.mock_txt)
 inputs:
   - id: one
-    type: any
+    type: string
     default: one
   - id: mock_txt
     type: File
-    doc: please input text file #記載をここに追加
     default:
       class: File
       location: mock.txt
